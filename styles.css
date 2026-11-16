@@ -166,3 +166,48 @@ width: 4px; height: 18px;
 background: var(--team);
 
 }
+/* Grid de 2 colunas para formulários */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+}
+
+/* Campo que ocupa as 2 colunas inteiras (usado na Etapa 8, para a letra da música) */
+.form-grid .form-group.full {
+    grid-column: 1 / -1;
+}
+<section id="ingressos" class="tickets">
+
+<div class="tickets-info"> …texto e setores… </div>
+
+<form action="#" class="ticket-form">
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label for="nome">Nome completo</label>
+
+<input type="text" id="nome" required>
+
+</div>
+
+<input type="email" id="email" required>
+
+<input type="date" id="dia" required>
+
+<input type="number" id="qtd" min="1" max="6">
+
+<small>Até 6 por pessoa.</small>
+
+<div class="form-group full">
+
+<input type="file" id="foto" accept="image/*">
+
+</div>
+
+<button type="submit" class="btn-primary full">
+
+</div>
+</section>
